@@ -15,6 +15,7 @@
 		FA63BD33201245E9002EE0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA63BD31201245E9002EE0DA /* LaunchScreen.storyboard */; };
 		FA77BEA7201738F2000DFAF1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77BEA6201738F2000DFAF1 /* Item.swift */; };
 		FA77BEA92017390E000DFAF1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77BEA82017390E000DFAF1 /* Category.swift */; };
+		FACEFDBB201F2BED0075C6F0 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEFDBA201F2BED0075C6F0 /* SwipeTableViewController.swift */; };
 		FAFBD5CD2016446000CC6389 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBD5CC2016446000CC6389 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		FA63BD34201245E9002EE0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA77BEA6201738F2000DFAF1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FA77BEA82017390E000DFAF1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FACEFDBA201F2BED0075C6F0 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		FAFBD5CC2016446000CC6389 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFBD5CC2016446000CC6389 /* CategoryViewController.swift */,
+				FACEFDBA201F2BED0075C6F0 /* SwipeTableViewController.swift */,
 				FA63BD2A201245E9002EE0DA /* TotoListViewController.swift */,
 			);
 			path = Controllers;
@@ -165,6 +168,11 @@
 					FA63BD24201245E9002EE0DA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -225,13 +233,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,6 +276,7 @@
 				FAFBD5CD2016446000CC6389 /* CategoryViewController.swift in Sources */,
 				FA63BD2B201245E9002EE0DA /* TotoListViewController.swift in Sources */,
 				FA63BD29201245E9002EE0DA /* AppDelegate.swift in Sources */,
+				FACEFDBB201F2BED0075C6F0 /* SwipeTableViewController.swift in Sources */,
 				FA77BEA92017390E000DFAF1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Todoey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.Todoey;
@@ -418,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Todoey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.Todoey;
